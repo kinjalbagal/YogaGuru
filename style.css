@@ -1,0 +1,1004 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&family=Mochiy+Pop+One&display=swap");
+/* 
+font-family: 'Arima Madurai', cursive;
+font-family: 'Mochiy Pop One', sans-serif;
+ */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*  
+$bgcolor1: #e3fdfd;
+$bgcolor2: #cbf1f5;
+$bgcolor3: #a6e3e9;
+$bgcolor4: #71c9ce;
+*/
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3fdfd), color-stop(#d3ebd5), color-stop(#b7ebbc), to(#7be885));
+  background: linear-gradient(to bottom, #e3fdfd, #d3ebd5, #b7ebbc, #7be885);
+}
+
+#nav-section {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-section #nav-btns {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+#nav-section #nav-btns .btn {
+  font-size: 1.2rem;
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+}
+
+#nav-section #nav-btns .btn:hover {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-bottom: 2px solid #2a7832;
+}
+
+#nav-heading {
+  padding: 10px 0 0 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #2a7832;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#heading {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #2a7832;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#sub-heading {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #2a7832;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home-content-box {
+  text-align: center;
+}
+
+#clicked {
+  height: 400px;
+  width: 400px;
+}
+
+#redirect-btns {
+  margin-top: 20px;
+}
+
+#redirect-btns > a {
+  text-decoration: none;
+  background-color: #2a7832;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+}
+
+#signup-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-error {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#signup-form {
+  margin-top: 10px;
+}
+
+#signup-form > div {
+  margin-top: 15px;
+}
+
+.labels {
+  font-size: 1.3rem;
+}
+
+.inputs {
+  font-size: 1.1rem;
+  padding: 5px 5px;
+  letter-spacing: 1px;
+  height: 30px;
+  width: 300px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+#signup-submit,
+#login-submit {
+  border: none;
+  background: #d3ebd5;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#verification {
+  height: 200px;
+  width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#close {
+  font-family: "Arima", cursive;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#verification > h3 {
+  font-family: "Arima", cursive;
+  color: #2a7832;
+}
+
+#verification > a {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+#verification > a:hover {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-bottom: 2px solid #2a7832;
+}
+
+#login-section {
+  font-family: "Arima", cursive;
+  height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#dashboard-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  width: 100vw;
+}
+
+#dashboard-main-section #dashboard-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#dashboard-main-section #dashboard-box img {
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 80px;
+  width: 60px;
+}
+
+#dashboard-main-section #dashboard-box label {
+  margin-top: 50px;
+  font-size: 2rem;
+  color: #2a7832;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+#dashboard-main-section #user-details h3 {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+
+#dashboard-main-section #user-details #user-details-box {
+  margin-left: 30px;
+  width: 500px;
+  background-color: #e3fdfd;
+  padding: 10px 0 10px 10px;
+  border-radius: 12px;
+}
+
+#dashboard-main-section #user-details #user-details-box label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#dashboard-main-section #user-details #user-details-box span {
+  display: block;
+}
+
+#left-section {
+  padding-right: 50px;
+  border-right: 2px solid #7be885;
+}
+
+#download-link {
+  height: 40px;
+  width: 400px;
+  outline: none;
+  padding-left: 5px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+#download-btn,
+#browse-btn {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: #e3fdfd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#browse-btn {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#name-head {
+  font-family: "Arima", cursive;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2a7832;
+  margin-right: 20px;
+}
+
+#upload-btn {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: #e3fdfd;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#error-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#upload-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#file-upload-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 250px;
+  width: 400px;
+  border: 2px dashed #2a7832;
+}
+
+#file {
+  height: 220px;
+  width: 200px;
+}
+
+.fa-cloud-upload-alt {
+  font-size: 5rem;
+  color: #2a7832;
+}
+
+#download-form {
+  height: 200px;
+  width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.download-heading {
+  margin-top: 50px;
+}
+
+#download-form > #download-url {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#key-input {
+  margin-top: 15px;
+  height: 30px;
+  width: 250px;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+#copy-btn {
+  font-size: 1.5rem;
+  color: #2a7832;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#send-mail-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #2a7832;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+#email-label {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #2a7832;
+  font-weight: 600;
+}
+
+#key-email {
+  height: 30px;
+  width: 300px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 1.2rem;
+}
+
+#key-send-btn {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a7832;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #e3fdfd;
+  color: #2a7832;
+  font-size: 1rem;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+#home-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+}
+
+#home-section #home-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100vw;
+}
+
+#home-section #home-box h1 {
+  margin-left: 30px;
+}
+
+#home-section #home-box a {
+  display: block;
+  margin-left: auto;
+  margin-right: 60px;
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#home-section #warmup {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+#home-section #warmup a {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#home-section #asans-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#home-section #asans-container .asan-box {
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+#home-section #asans-container .asan-box img {
+  height: 150px;
+  width: 200px;
+  border-radius: 12px;
+}
+
+#home-section #asans-container .asan-box div {
+  text-align: center;
+}
+
+#task-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+
+#task-main-section #task-video-box #asan-video {
+  height: 500px;
+  width: 420px;
+}
+
+#task-main-section #task-img-box img {
+  height: 500px;
+  width: 420px;
+}
+
+#task-main-section #task-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  gap: 5rem;
+}
+
+#task-main-section #task-details #accuracy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#task-main-section #task-details #accuracy label {
+  font-size: 2rem;
+  position: relative;
+  top: 5px;
+}
+
+#task-main-section #task-details #accuracy #message {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#task-main-section #task-details #timerr, #task-main-section #task-details #next-btn {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#task-main-section #task-details #timerr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#task-main-section #task-details #pose-name {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+#task-main-section #task-details #notice {
+  position: relative;
+  bottom: 60px;
+  right: 400px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: red;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+#test-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#test-main-section h1 {
+  font-size: 3rem;
+  color: #134218;
+  opacity: 0.3;
+}
+
+#about-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+}
+
+#about-main-section #founder-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-main-section #founder-details .info-box {
+  width: 300px;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  color: whitesmoke;
+}
+
+#about-main-section #founder-details .info-box .prof-img {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 80px;
+}
+
+#about-main-section #founder-details .info-box .info-det {
+  padding-left: 10px;
+  padding-top: 90px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: #78cb80;
+}
+
+#about-main-section #founder-details .info-box .info-det .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-main-section #founder-details .info-box .info-det .socials a img {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#about-main-section #founder-details .info-box:hover {
+  position: relative;
+  bottom: 30px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+#contact-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+}
+
+#contact-main-section h1 {
+  text-align: center;
+  padding: 30px;
+  font-size: 2rem;
+  color: #134218;
+}
+
+#contact-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+#contact-box .vertical-line {
+  border-left: 1.5px solid #134218;
+}
+
+#contact-box #map-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 48%;
+}
+
+#contact-box #contact-form {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-box #contact-form form label {
+  padding: 20px 0 3px 0;
+  font-size: 1.2rem;
+}
+
+#contact-box #contact-form form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #2a7832;
+  width: 300px;
+  color: #134218;
+  padding-left: 3px;
+  letter-spacing: 0.5px;
+  height: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#contact-box #contact-form form input:focus, #contact-box #contact-form form textarea:focus {
+  outline: none;
+}
+
+#contact-box #contact-form form textarea {
+  background: transparent;
+  border: 2px solid #2a7832;
+  color: #134218;
+  border-radius: 8px;
+  padding: 3px;
+  letter-spacing: 1px;
+  width: 300px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#contact-box #contact-form form button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: #134218;
+  background: #2a7832;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 2px solid #2a7832 !important;
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    margin-left: 0;
+  }
+  to {
+    padding-left: 100vw;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: 0;
+  }
+  to {
+    padding-left: 100vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #heading {
+    font-size: 1.5rem;
+  }
+  #nav-heading {
+    font-size: 1.5rem;
+  }
+  #nav-section #nav-btns {
+    margin-left: auto;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+  }
+  #nav-section #nav-btns .btn {
+    font-size: 1rem;
+    font-family: "Arima", cursive;
+    text-decoration: none;
+    font-weight: 600;
+    color: #2a7832;
+    margin-right: 30px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+  }
+  #nav-section #nav-btns .btn:hover {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border-bottom: 2px solid #2a7832;
+  }
+  #dashboard-nav-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #name-head {
+    display: none;
+  }
+  #dashboard-main-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #file-upload-section {
+    height: 250px;
+    width: 300px;
+    border: 2px dashed #2a7832;
+  }
+  #dashboard-main-section {
+    gap: 2rem;
+  }
+  #left-section {
+    padding-right: 0;
+    border-right: none;
+  }
+  #right-section {
+    padding-top: 50px;
+    border-top: 2px solid #7be885;
+    text-align: center;
+  }
+  #download-link {
+    height: 40px;
+    width: 300px;
+  }
+  #download-btn {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  #download-form {
+    height: 200px;
+    width: 320px;
+  }
+  #download-url {
+    margin-top: 15px;
+  }
+  #verification {
+    width: 300px;
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

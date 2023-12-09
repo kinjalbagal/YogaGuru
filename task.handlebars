@@ -1,0 +1,55 @@
+<nav>
+    <section id="nav-section">
+        <h1 id="nav-heading">Yoga Guru</h1>
+        <div id="nav-btns">
+            <a href="/home" class="btn">Home</a>
+            <a href="/dashboard" class="btn">Dashboard</a>
+            <a href="/test" class="btn">Test</a>
+            <a href="/about" class="btn">About Us</a>
+            <a href="/contact" class="btn">Contact Us</a>
+            <a href="/logout" class="btn">Logout</a>
+        </div>
+    </section>
+</nav>
+<main>
+
+    <section id="task-main-section">
+        {{!-- <div id="task-container">
+
+        </div> --}}
+        <div id="task-video-box">
+            <iframe id="asan-video"
+                src="https://youtube.com/embed/bLSMj6EgOLc?autoplay=1&mute=1&loop=1">
+            </iframe>
+        </div>
+        <div id="task-detection-box">
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <video id="video" width="640" height="480" style="display:none"></video>
+            <div><textarea id="numbers" style="display:none"></textarea></div>
+            <audio controls autoplay src="./countdown.mp3" id="audio" style="display:none;" muted>
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </div>
+        <div id="task-details">
+        <div id="pose-name"></div>
+            <div id="accuracy">
+                <label>Accuracy : </label>
+                <div id="message">Loading...</div>
+            </div>
+            <div id="timerr">00:<div id="timer">15</div></div>
+            <div id="next-btn">Next</div>
+            <div id="notice"></div>
+        </div>
+        <div style="width: 100%; display:flex; align-items: center; justify-content:center;" id="cur">
+                Pose
+        </div>
+        <div id="task-img-box">
+            <img src="assets/Asans/Easy/goddess.png" alt="">
+        </div>
+    </section>
+
+
+</main>
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+<script src="js/task.js"></script>

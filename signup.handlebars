@@ -1,0 +1,63 @@
+<nav>
+    <section id="nav-section">
+        <h1 id="nav-heading">Yoga Guru</h1>
+        <div id="nav-btns">
+            <a href="/signup" class="btn">Signup</a>
+            <a href="/login" class="btn">Login</a>
+        </div>
+    </section>
+</nav>
+<main>
+    <section id="signup-section">
+        <img src="assets/signup-yoga.gif" alt="signup">
+
+        <h3 id="sub-heading">Signup</h3>
+
+        <div class="form-error">
+
+        </div>
+
+        <form action="/signup" method="POST" id="signup-form" >
+            <div class="name-inp">
+                <label class="labels" for="name">Name :</label><br>
+                <input class="inputs" type="text" name="name" id="name">
+            </div>
+            <div class="age-inp">
+                <label class="labels" for="age">Age :</label><br>
+                <input class="inputs" type="number" name="age" id="age">
+            </div>
+            <div class="email-inp">
+                <label class="labels" for="email">Email :</label><br>
+                <input class="inputs" type="text" name="email" id="email">
+            </div>
+            <div class="password-inp">
+                <label class="labels" for="password">Password :</label><br>
+                <input class="inputs" type="password" name="password" id="password">
+            </div>
+            <div class="med-condition-inp">
+                <label class="labels">Any Medical Condition :</label><br>
+                <select name="med-condtion" id="med-condtion" class="inputs">
+                    <option value="none">None</option>
+                    <option value="blood-pressure">Blood Pressure</option>
+                    <option value="diabaets">Diabetes</option>
+                    <option value="pregnancy">Pregnancy</option>
+                </select>
+            </div>
+            <div class="experience-inp">
+                <label class="labels">Experience :</label><br>
+                <select name="experience" id="experience" class="inputs">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+            <button type="button" id="signup-submit">Submit</button>
+        </form>
+    </section>
+    <div id="verification" style="display: none;">
+        <span id="close">X</span>
+         <h3>Verificaton Email is sent , Plzz Check your Email</h3>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Check</a>
+    </div>
+</main>
+<script src="js/signup.js"></script>

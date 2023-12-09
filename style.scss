@@ -1,0 +1,842 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&family=Mochiy+Pop+One&display=swap");
+
+/* 
+font-family: 'Arima Madurai', cursive;
+font-family: 'Mochiy Pop One', sans-serif;
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*  
+$bgcolor1: #e3fdfd;
+$bgcolor2: #cbf1f5;
+$bgcolor3: #a6e3e9;
+$bgcolor4: #71c9ce;
+*/
+$bgcolor1: #e3fdfd;
+$bgcolor2: #d3ebd5;
+$bgcolor3: #b7ebbc;
+$bgcolor4: #7be885;
+
+$color1: #2a7832;
+
+@mixin btn() {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  font-weight: 600;
+  color: $color1;
+  margin-right: 30px;
+  padding-bottom: 5px;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    $bgcolor1,
+    $bgcolor2,
+    $bgcolor3,
+    $bgcolor4
+  );
+}
+
+#nav-section {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+
+  #nav-btns {
+    margin-left: auto;
+    margin-right: 25px;
+
+    .btn {
+      font-size: 1.2rem;
+      @include btn();
+    }
+
+    .btn:hover {
+      transition: all 0.2s ease-in;
+      border-bottom: 2px solid $color1;
+    }
+  }
+}
+
+#nav-heading {
+  padding: 10px 0 0 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: $color1;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#heading {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: $color1;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#sub-heading {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: $color1;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+#main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-content-box {
+  text-align: center;
+}
+
+#clicked {
+  height: 400px;
+  width: 400px;
+}
+
+#redirect-btns {
+  margin-top: 20px;
+}
+
+#redirect-btns > a {
+  text-decoration: none;
+  background-color: $color1;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+}
+
+#signup-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-error {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#signup-form {
+  margin-top: 10px;
+}
+
+#signup-form > div {
+  margin-top: 15px;
+}
+
+.labels {
+  font-size: 1.3rem;
+}
+
+.inputs {
+  font-size: 1.1rem;
+  padding: 5px 5px;
+  letter-spacing: 1px;
+  height: 30px;
+  width: 300px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+#signup-submit,
+#login-submit {
+  border: none;
+  background: $bgcolor2;
+  color: $color1;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#verification {
+  height: 200px;
+  width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#close {
+  font-family: "Arima", cursive;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#verification > h3 {
+  font-family: "Arima", cursive;
+  color: $color1;
+}
+
+#verification > a {
+  @include btn();
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+#verification > a:hover {
+  transition: all 0.2s ease-in;
+  border-bottom: 2px solid $color1;
+}
+
+#login-section {
+  font-family: "Arima", cursive;
+  height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#dashboard-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  width: 100vw;
+
+  #dashboard-box {
+    display: flex;
+
+    img {
+      margin-top: 20px;
+      margin-left: 30px;
+      height: 80px;
+      width: 60px;
+    }
+
+    label {
+      margin-top: 50px;
+      font-size: 2rem;
+      color: #2a7832;
+      margin-left: 10px;
+      font-weight: 600;
+    }
+  }
+
+  #user-details {
+    h3 {
+      margin-top: 30px;
+      margin-left: 30px;
+      font-size: 1.5rem;
+    }
+
+    #user-details-box {
+      margin-left: 30px;
+      width: 500px;
+      background-color: #e3fdfd;
+      padding: 10px 0 10px 10px;
+      border-radius: 12px;
+      label {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+#left-section {
+  padding-right: 50px;
+  border-right: 2px solid $bgcolor4;
+}
+
+#download-link {
+  height: 40px;
+  width: 400px;
+  outline: none;
+  padding-left: 5px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+#download-btn,
+#browse-btn {
+  @include btn();
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: $bgcolor1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#browse-btn {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#name-head {
+  font-family: "Arima", cursive;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $color1;
+  margin-right: 20px;
+}
+
+#upload-btn {
+  @include btn();
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: $bgcolor1;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#error-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#upload-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#file-upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  width: 400px;
+  border: 2px dashed $color1;
+}
+
+#file {
+  height: 220px;
+  width: 200px;
+}
+
+.fa-cloud-upload-alt {
+  font-size: 5rem;
+  color: $color1;
+}
+
+#download-form {
+  height: 200px;
+  width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-heading {
+  margin-top: 50px;
+}
+
+#download-form > #download-url {
+  @include btn();
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#key-input {
+  margin-top: 15px;
+  height: 30px;
+  width: 250px;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+#copy-btn {
+  font-size: 1.5rem;
+  color: $color1;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#send-mail-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: $color1;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+#email-label {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: $color1;
+  font-weight: 600;
+}
+
+#key-email {
+  height: 30px;
+  width: 300px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  padding-left: 5px;
+  font-size: 1.2rem;
+}
+
+#key-send-btn {
+  @include btn();
+  padding: 8px 15px;
+  border: none;
+  background-color: $bgcolor1;
+  color: $color1;
+  font-size: 1rem;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+#home-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+
+  #home-box {
+    display: flex;
+    max-width: 100vw;
+
+    h1 {
+      margin-left: 30px;
+    }
+
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: 60px;
+      text-decoration: none;
+      border: none;
+      background: $bgcolor4;
+      color: $color1;
+      padding: 8px 18px;
+      font-size: 1rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  #warmup {
+    margin-top: 40px;
+    margin-left: 30px;
+    a {
+      text-decoration: none;
+      border: none;
+      background: $bgcolor4;
+      color: $color1;
+      padding: 8px 18px;
+      font-size: 1rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  #asans-container {
+    display: flex;
+    flex-wrap: wrap;
+    .asan-box {
+      height: 200px;
+      width: 200px;
+      margin-top: 20px;
+      margin-left: 30px;
+      img {
+        height: 150px;
+        width: 200px;
+        border-radius: 12px;
+      }
+      div {
+        text-align: center;
+      }
+    }
+  }
+}
+
+#task-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+
+  #task-video-box {
+    #asan-video {
+      height: 500px;
+      width: 420px;
+    }
+  }
+
+  #task-img-box {
+    img {
+      height: 500px;
+      width: 420px;
+    }
+  }
+
+  #task-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 5rem;
+    #accuracy {
+      display: flex;
+      label {
+        font-size: 2rem;
+        position: relative;
+        top: 5px;
+      }
+      #message {
+        text-decoration: none;
+        border: none;
+        background: $bgcolor4;
+        color: $color1;
+        padding: 8px 18px;
+        font-size: 2rem;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    #timerr,#next-btn {
+      text-decoration: none;
+      border: none;
+      background: $bgcolor4;
+      color: $color1;
+      padding: 8px 18px;
+      font-size: 2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    #timerr{
+      display: flex;
+    }
+    #pose-name{
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    #notice{
+      position: relative;
+      bottom: 60px;
+      right: 400px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: red;
+      padding: 5px 12px;
+      border-radius: 8px;
+    }
+  }
+}
+
+#test-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    color: #134218;
+    opacity: 0.3;
+  }
+}
+
+#about-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+
+  #founder-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .info-box{
+      width: 300px;
+      transition: transform 250ms;
+      // margin-left: 30px;
+      color: whitesmoke;
+      .prof-img{
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 80px;
+      }
+      .info-det{
+        padding-left: 10px;
+        padding-top: 90px;
+        padding-bottom: 10px;
+        border-radius: 8px;
+        background-color: #78cb80;
+        .socials{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a{
+            img{
+              height: 30px;
+              width: 30px;
+              margin-right: 20px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .info-box:hover{
+      position: relative;
+      bottom: 30px;
+      // transition: .5s ease-in-out all;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+#contact-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+
+  h1{
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+    color: #134218;
+  }
+
+}
+
+#contact-box{
+  display: flex ;
+  gap: 2rem;
+  .vertical-line{
+    border-left: 1.5px solid #134218;
+  }
+  #map-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+  }
+  #contact-form{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+      label{
+        padding: 20px 0 3px 0;
+        font-size: 1.2rem;
+      }
+      input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #2a7832;
+        width: 300px;
+        color: #134218;
+        padding-left: 3px;
+        letter-spacing: 0.5px;
+        height: 30px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      input:focus,textarea:focus{
+        outline: none;
+      }
+      textarea{
+        background: transparent;
+        border: 2px solid #2a7832;
+        color: #134218;
+        border-radius: 8px;
+        padding: 3px;
+        letter-spacing: 1px;
+        width: 300px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      button{
+        padding: 8px 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: #134218;
+        background: #2a7832;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  
+} 
+
+
+.active {
+  border-bottom: 2px solid #2a7832 !important;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    padding-left: 100vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #heading {
+    font-size: 1.5rem;
+  }
+
+  #nav-heading {
+    font-size: 1.5rem;
+  }
+
+  #nav-section {
+    #nav-btns {
+      margin-left: auto;
+      margin-right: 10px;
+      position: relative;
+      top: 10px;
+
+      .btn {
+        font-size: 1rem;
+        @include btn();
+        margin-right: 20px;
+      }
+
+      .btn:hover {
+        transition: all 0.2s ease-in;
+        border-bottom: 2px solid $color1;
+      }
+    }
+  }
+
+  #dashboard-nav-section {
+    flex-direction: column;
+  }
+
+  #name-head {
+    display: none;
+  }
+
+  #dashboard-main-section {
+    flex-direction: column;
+  }
+
+  #file-upload-section {
+    height: 250px;
+    width: 300px;
+    border: 2px dashed $color1;
+  }
+
+  #dashboard-main-section {
+    gap: 2rem;
+  }
+
+  #left-section {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  #right-section {
+    padding-top: 50px;
+    border-top: 2px solid $bgcolor4;
+    text-align: center;
+  }
+
+  #download-link {
+    height: 40px;
+    width: 300px;
+  }
+
+  #download-btn {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  #download-form {
+    height: 200px;
+    width: 320px;
+  }
+
+  #download-url {
+    margin-top: 15px;
+  }
+
+  #verification {
+    width: 300px;
+    padding: 0 10px;
+  }
+}
